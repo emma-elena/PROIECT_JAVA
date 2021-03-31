@@ -14,8 +14,10 @@ public class main {
         System.out.println("Pentru a adauga un restaurant apasati 4");
         System.out.println("Pentru a vedea o comanda apasati 5");
         System.out.println("Pentru a vedea datele unui utilizator apasati 6");
-        System.out.println("Pentru a vedea care sunt restaurantele de la care puteti comanda apasati 7");
-
+        System.out.println("Pentru a vedea care sunt toate comenzile apasati 7");
+        System.out.println("Pentru a vedea care sunt toate restaurantele apasati 8");
+        System.out.println("Pentru a vedea toti utilizatorii apasati 9");
+        System.out.println("Pentru a vedea un detalii despre un restaurant apasati 10");
         int alegere = in.nextInt();
         //Pentru a iesi din meniu apasati -1
         while (alegere > 0){
@@ -46,6 +48,16 @@ public class main {
                 else if (alegere == 7)
                 {
                     System.out.println(InterfataAdmin.comenzi.toString());
+                }
+                else if (alegere==8){
+                    System.out.println(InterfataAdmin.restaurante.toString());
+                }
+                else if ( alegere == 9){
+                    System.out.println(InterfataAdmin.utilizatori.toString());
+                }
+                else if ( alegere == 10){
+                    System.out.println("Introduceti ID-ul restaurantului");
+                    System.out.println(actiuni.getRestaurantById(in.nextInt()).toString());
                 }
             } catch (Exception e)
             {
