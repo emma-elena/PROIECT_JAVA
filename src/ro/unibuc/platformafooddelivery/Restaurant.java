@@ -19,6 +19,10 @@ public class Restaurant {
         this.id = contor;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public String getNume() {
         return nume;
     }

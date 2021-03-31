@@ -13,15 +13,15 @@ public class Utilizatori {
     protected String adresa;
     private static int contor = 0;
 
-    public Utilizatori(@NotNull String userName, Date dataNasterii, String adress) {
+    public Utilizatori(@NotNull String userName, Date dataNasterii, String adresa) {
         this.userName = userName;
         this.dataNasterii = dataNasterii;
-        this.adresa = adress;
+        this.adresa = adresa;
         contor++;
         this.id = contor;
     }
 
-    public void setUserName(String userName) {
+    public void setUserName(@NotNull String userName) {
         this.userName = userName;
     }
 
@@ -29,11 +29,11 @@ public class Utilizatori {
         this.dataNasterii = dataNasterii;
     }
 
-    public void setAdress(String adress) {
+    public void setAdress(String adresa) {
         this.adresa = adresa;
     }
 
-    public String getUserName() {
+    public @NotNull String getUserName() {
         return userName;
     }
 
@@ -55,7 +55,7 @@ public class Utilizatori {
                 "userName='" + userName + '\'' +
                 ", id=" + id +
                 ", dataNasterii=" + dataNasterii +
-                ", adress='" + adresa + '\'' +
+                ", adresa='" + adresa + '\'' +
                 '}';
     }
 }
