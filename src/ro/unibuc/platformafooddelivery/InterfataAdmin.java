@@ -9,19 +9,19 @@ import java.util.Scanner; //citeste -> vine de la scann
 //Aici declar ce voi implementa in Actiuni.java
 public interface InterfataAdmin {
 
-    Utilizatori getUtilizatoriById(int id);
-    Comenzi getComenziById(int id);
+    Utilizator getUtilizatorById(int id);
+    Comanda getComandaById(int id);
     Restaurant getRestaurantById(int id);
 
-    ArrayList<Comenzi> comenzi = new ArrayList<>();
+    ArrayList<Comanda> comenzi = new ArrayList<>();
     ArrayList<Restaurant> restaurante = new ArrayList<>();
-    ArrayList<Utilizatori> utilizatori = new ArrayList<>();
-    ArrayList<Soferi> soferi = new ArrayList<>();
+    ArrayList<Utilizator> utilizator = new ArrayList<>();
+    ArrayList<Sofer> sofer = new ArrayList<>();
 
-    void adaugaComenzi(Scanner in);
+    void adaugaComanda(Scanner in);
     void adaugaRestaurant(Scanner in);
-    void adaugaUtilizatori(Scanner in);
-    void adaugaSoferi(Scanner in);
+    void adaugaUtilizator(Scanner in);
+    void adaugaSofer(Scanner in);
 
 
     default Date parseDate(Scanner in) {

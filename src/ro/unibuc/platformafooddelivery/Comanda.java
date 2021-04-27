@@ -4,18 +4,18 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Date;
 
-public class Comenzi {
+public class Comanda {
     @NotNull
     protected final String restaurant;
-    protected final String utilizator;
+    protected final String utilizatorul;
     protected final String sofer;
     protected final Date data;
     protected final int id;
     private static int contor = 0;
 
-    public Comenzi(@NotNull String restaurant, String utilizator, String sofer, Date data) {
+    public Comanda(@NotNull String restaurant, String utilizatorul, String sofer, Date data) {
         this.restaurant = restaurant;
-        this.utilizator = utilizator;
+        this.utilizatorul = utilizatorul;
         this.sofer = sofer;
         this.data = data;
         contor++;
@@ -26,8 +26,8 @@ public class Comenzi {
         return restaurant;
     }
 
-    public String getUtilizator() {
-        return utilizator;
+    public String getUtilizatorul() {
+        return utilizatorul;
     }
 
     public String getSofer() {
@@ -44,12 +44,13 @@ public class Comenzi {
 
     @Override
     public String toString() {
-        return "Comenzi{" +
+        return "Comanda{" +
                 "restaurant='" + restaurant + '\'' +
-                ", utilizator='" + utilizator + '\'' +
+                ", utilizatorul='" + utilizatorul + '\'' +
                 ", sofer='" + sofer + '\'' +
                 ", data=" + data +
                 ", id=" + id +
                 '}';
     }
 }
+

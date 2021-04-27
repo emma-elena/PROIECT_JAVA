@@ -23,30 +23,6 @@ public class Restaurant {
         return id;
     }
 
-    public String getNume() {
-        return nume;
-    }
-
-    public String getAdresa() {
-        return adresa;
-    }
-
-    public String getNumarDeTelefon() {
-        return numarDeTelefon;
-    }
-
-    public void setNume(String nume) {
-        this.nume = nume;
-    }
-
-    public void setAdresa(String adresa) {
-        this.adresa = adresa;
-    }
-
-    public void setNumarDeTelefon(String numarDeTelefon) {
-        this.numarDeTelefon = numarDeTelefon;
-    }
-
     @Override
     public String toString() {
         return "Restaurant{" +

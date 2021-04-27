@@ -23,14 +23,14 @@ public class main {
         while (alegere > 0){
             try {
                 if ( alegere == 1){
-                    actiuni.adaugaUtilizatori(in);
+                    actiuni.adaugaUtilizator(in);
                 }
                 else if (alegere == 2){
-                    actiuni.adaugaSoferi(in);
+                    actiuni.adaugaSofer(in);
                 }
                 else if (alegere == 3)
                 {
-                    actiuni.adaugaComenzi(in);
+                    actiuni.adaugaComanda(in);
                 }
                 else if ( alegere == 4)
                 {
@@ -38,12 +38,12 @@ public class main {
                 }
                 else if ( alegere == 5){
                     System.out.println("Introduceti ID-ul comenzii pentru care doriti sa vedeti detalii");
-                    System.out.println(actiuni.getComenziById(in.nextInt()).toString());
+                    System.out.println(actiuni.getComandaById(in.nextInt()).toString());
                 }
                 else if ( alegere == 6)
                 {
                     System.out.println("Introduceti ID-ul utilizatorului pentru care doriti detalii");
-                    System.out.println(actiuni.getUtilizatoriById(in.nextInt()).toString());
+                    System.out.println(actiuni.getUtilizatorById(in.nextInt()).toString());
                 }
                 else if (alegere == 7)
                 {
@@ -53,7 +53,7 @@ public class main {
                     System.out.println(InterfataAdmin.restaurante.toString());
                 }
                 else if ( alegere == 9){
-                    System.out.println(InterfataAdmin.utilizatori.toString());
+                    System.out.println(InterfataAdmin.utilizator.toString());
                 }
                 else if ( alegere == 10){
                     System.out.println("Introduceti ID-ul restaurantului");
@@ -67,3 +67,5 @@ public class main {
         }
     }
 }
+
+

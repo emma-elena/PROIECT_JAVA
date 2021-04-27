@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Date;
 
 
-public class Utilizatori {
+public class Utilizator {
     @NotNull //ca nu poti sa le lasi goale
     protected String userName;
     protected final int id;
@@ -13,7 +13,7 @@ public class Utilizatori {
     protected String adresa;
     private static int contor = 0;
 
-    public Utilizatori(@NotNull String userName, Date dataNasterii, String adresa) {
+    public Utilizator(@NotNull String userName, Date dataNasterii, String adresa) {
         this.userName = userName;
         this.dataNasterii = dataNasterii;
         this.adresa = adresa;
@@ -51,11 +51,14 @@ public class Utilizatori {
 
     @Override
     public String toString() {
-        return "Utilizatori{" +
+        return "Utilizator{" +
                 "userName='" + userName + '\'' +
                 ", id=" + id +
                 ", dataNasterii=" + dataNasterii +
                 ", adresa='" + adresa + '\'' +
                 '}';
+    }
+
+    public void add(Utilizator utilizator) {
     }
 }

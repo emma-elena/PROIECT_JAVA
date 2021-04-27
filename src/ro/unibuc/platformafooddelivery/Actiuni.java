@@ -7,17 +7,17 @@ import java.util.Scanner;
 public class Actiuni  implements InterfataAdmin{
 
     @Override
-    public Utilizatori getUtilizatoriById(int id){
-        for(Utilizatori utilizator: utilizatori){
-            if(utilizator.getId() == id)
-                return utilizator;
+    public Utilizator getUtilizatorById(int id){
+        for(Utilizator utilizatorul: utilizator){
+            if(utilizatorul.getId() == id)
+                return utilizatorul;
         }
         return null;
     }
 
     @Override
-    public Comenzi getComenziById(int id){
-        for(Comenzi comanda: comenzi)
+    public Comanda getComandaById(int id){
+        for(Comanda comanda: comenzi)
         {
             if(comanda.getId() == id)
                 return comanda;
@@ -35,13 +35,14 @@ public class Actiuni  implements InterfataAdmin{
         return null;
     }
 
+
     @Override
-    public void adaugaComenzi(Scanner in){
+    public void adaugaComanda(Scanner in){
         System.out.println("Introduceti numele restaurantului");
         String restaurant = in.next();
 
         System.out.println("Introduceti numele de utilizator");
-        String utilizator = in.next();
+        String utilizatorul = in.next();
 
         System.out.println("Introduceti numele soferului care preia comanda");
         String sofer = in.next();
@@ -50,7 +51,7 @@ public class Actiuni  implements InterfataAdmin{
         Date data = parseDate(in);
 
         //aici o sa creezi noua comanda care o sa aiba particularitatile introduse mai sus
-        Comenzi comanda = new Comenzi(restaurant, utilizator, sofer, data);
+        Comanda comanda = new Comanda(restaurant, utilizatorul, sofer, data);
         comenzi.add(comanda); //aici o sa adaugi comanda in vectorul de comenzi
     }
 
@@ -70,7 +71,7 @@ public class Actiuni  implements InterfataAdmin{
     }
 
     @Override
-    public void adaugaUtilizatori(Scanner in){
+    public void adaugaUtilizator(Scanner in){
         System.out.println("Introduceti numele de utilizator");
         String userName = in.next();
 
@@ -80,15 +81,15 @@ public class Actiuni  implements InterfataAdmin{
         System.out.println("Introduceti adresa");
         String adresa = in.next();
 
-        //Utilizatori acum a devenit un tip de declarare cum este bool, int, string, char etc,
+        //Utilizator acum a devenit un tip de declarare cum este bool, int, string, char etc,
         // poti declara un obiect de tip Utilizator
-        Utilizatori utilizator = new Utilizatori(userName, dataNasterii, adresa);
-        utilizatori.add(utilizator);
+        Utilizator utilizatorul = new Utilizator(userName, dataNasterii, adresa);
+        utilizator.add(utilizatorul);
     }
 
 
     @Override
-    public void adaugaSoferi(Scanner in){
+    public void adaugaSofer(Scanner in){
         System.out.println("Introduceti numele soferului");
         String userName = in.next();
 
@@ -98,8 +99,8 @@ public class Actiuni  implements InterfataAdmin{
         System.out.println("Introduceti adresa");
         String adresa = in.next();
 
-        Soferi sofer = new Soferi(userName, dataNasterii, adresa);
-        soferi.add(sofer);
+        Sofer soferul = new Sofer(userName, dataNasterii, adresa);
+        sofer.add(soferul);
     }
 
 }

@@ -4,9 +4,9 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Date;
 
-public class Soferi extends Utilizatori {
+public class Sofer extends Utilizator {
 
-    public Soferi(@NotNull String userName, Date dataNasterii, String adresa) {
+    public Sofer(@NotNull String userName, Date dataNasterii, String adresa) {
         super(userName, dataNasterii, adresa);
     }
 }
