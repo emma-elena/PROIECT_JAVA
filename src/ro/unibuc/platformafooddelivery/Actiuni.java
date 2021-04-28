@@ -1,5 +1,10 @@
 package ro.unibuc.platformafooddelivery;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -35,7 +40,6 @@ public class Actiuni  implements InterfataAdmin{
         return null;
     }
 
-
     @Override
     public void adaugaComanda(Scanner in){
         System.out.println("Introduceti numele restaurantului");
@@ -44,17 +48,17 @@ public class Actiuni  implements InterfataAdmin{
         System.out.println("Introduceti numele de utilizator");
         String utilizatorul = in.next();
 
-        System.out.println("Introduceti tipul de mancare");
-        String denumireMancare = in.next();
+        System.out.println("Introduceti numele mancarii");
+        String mancarea = in.next();
 
-        System.out.println("Introduceti bautura");
-        String denumireBautura = in.next();
+        System.out.println("Introduceti numele bauturii");
+        String bautura = in.next();
 
         System.out.println("Introduceti data sub forma aaaa-ll-zz");
         Date data = parseDate(in);
 
         //aici o sa creezi noua comanda care o sa aiba particularitatile introduse mai sus
-        Comanda comanda = new Comanda(restaurant, utilizatorul, data);
+        Comanda comanda = new Comanda(restaurant, utilizatorul,mancarea, bautura, data);
         comenzi.add(comanda); //aici o sa adaugi comanda in vectorul de comenzi
     }
 
@@ -106,9 +110,126 @@ public class Actiuni  implements InterfataAdmin{
         sofer.add(soferul);
     }
 
+    public void alegere1() throws IOException {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss");
+        Date date = new Date(System.currentTimeMillis());
+        File file = new File("time.csv");
+        FileWriter fr = new FileWriter(file, true);
+        BufferedWriter writer = new BufferedWriter(fr);
+        writer.write("S-a adaugat un nou utilizator" + formatter.format(date));
+        writer.newLine();
+        writer.close();
+        fr.close();
+    }
+
+    public void alegere2() throws IOException {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss");
+        Date date = new Date(System.currentTimeMillis());
+        File file = new File("time.csv");
+        FileWriter fr = new FileWriter(file, true);
+        BufferedWriter writer = new BufferedWriter(fr);
+        writer.write("S-a adaugat un nou sofer" + formatter.format(date));
+        writer.newLine();
+        writer.close();
+        fr.close();
+    }
+
+    public void alegere3() throws IOException {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss");
+        Date date = new Date(System.currentTimeMillis());
+        File file = new File("time.csv");
+        FileWriter fr = new FileWriter(file, true);
+        BufferedWriter writer = new BufferedWriter(fr);
+        writer.write("S-a adaugat o comanda noua" + formatter.format(date));
+        writer.newLine();
+        writer.close();
+        fr.close();
+    }
+
+    public void alegere4() throws IOException {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss");
+        Date date = new Date(System.currentTimeMillis());
+        File file = new File("time.csv");
+        FileWriter fr = new FileWriter(file, true);
+        BufferedWriter writer = new BufferedWriter(fr);
+        writer.write("S-a adaugat un nou restaurant" + formatter.format(date));
+        writer.newLine();
+        writer.close();
+        fr.close();
+    }
+
+    public void alegere5() throws IOException {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss");
+        Date date = new Date(System.currentTimeMillis());
+        File file = new File("time.csv");
+        FileWriter fr = new FileWriter(file, true);
+        BufferedWriter writer = new BufferedWriter(fr);
+        writer.write("S-a vizualizat o comanda" + formatter.format(date));
+        writer.newLine();
+        writer.close();
+        fr.close();
+    }
+
+    public void alegere6() throws IOException {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss");
+        Date date = new Date(System.currentTimeMillis());
+        File file = new File("time.csv");
+        FileWriter fr = new FileWriter(file, true);
+        BufferedWriter writer = new BufferedWriter(fr);
+        writer.write("S-au vizualizat datele unui utilizator" + formatter.format(date));
+        writer.newLine();
+        writer.close();
+        fr.close();
+    }
+
+    public void alegere7() throws IOException {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss");
+        Date date = new Date(System.currentTimeMillis());
+        File file = new File("time.csv");
+        FileWriter fr = new FileWriter(file, true);
+        BufferedWriter writer = new BufferedWriter(fr);
+        writer.write("S-au vizualizat toate comenzile" + formatter.format(date));
+        writer.newLine();
+        writer.close();
+        fr.close();
+    }
+
+    public void alegere8() throws IOException {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss");
+        Date date = new Date(System.currentTimeMillis());
+        File file = new File("time.csv");
+        FileWriter fr = new FileWriter(file, true);
+        BufferedWriter writer = new BufferedWriter(fr);
+        writer.write("S-au vizualizat restaurante" + formatter.format(date));
+        writer.newLine();
+        writer.close();
+        fr.close();
+    }
+
+    public void alegere9() throws IOException {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss");
+        Date date = new Date(System.currentTimeMillis());
+        File file = new File("time.csv");
+        FileWriter fr = new FileWriter(file, true);
+        BufferedWriter writer = new BufferedWriter(fr);
+        writer.write("S-au vizualizat utilizatori" + formatter.format(date));
+        writer.newLine();
+        writer.close();
+        fr.close();
+    }
+
+    public void alegere10() throws IOException {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss");
+        Date date = new Date(System.currentTimeMillis());
+        File file = new File("time.csv");
+        FileWriter fr = new FileWriter(file, true);
+        BufferedWriter writer = new BufferedWriter(fr);
+        writer.write("S-au vizualizat detalii despre un restaurant" + formatter.format(date));
+        writer.newLine();
+        writer.close();
+        fr.close();
+    }
 }
-
-
 
 //Pe ecran: Introduceti numele restaurtului
 //Trattoria
