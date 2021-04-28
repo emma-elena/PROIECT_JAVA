@@ -44,14 +44,17 @@ public class Actiuni  implements InterfataAdmin{
         System.out.println("Introduceti numele de utilizator");
         String utilizatorul = in.next();
 
-        System.out.println("Introduceti numele soferului care preia comanda");
-        String sofer = in.next();
+        System.out.println("Introduceti tipul de mancare");
+        String denumireMancare = in.next();
+
+        System.out.println("Introduceti bautura");
+        String denumireBautura = in.next();
 
         System.out.println("Introduceti data sub forma aaaa-ll-zz");
         Date data = parseDate(in);
 
         //aici o sa creezi noua comanda care o sa aiba particularitatile introduse mai sus
-        Comanda comanda = new Comanda(restaurant, utilizatorul, sofer, data);
+        Comanda comanda = new Comanda(restaurant, utilizatorul, data);
         comenzi.add(comanda); //aici o sa adaugi comanda in vectorul de comenzi
     }
 
@@ -104,6 +107,9 @@ public class Actiuni  implements InterfataAdmin{
     }
 
 }
+
+
+
 //Pe ecran: Introduceti numele restaurtului
 //Trattoria
 //  in.next() o sa citeasca "Trattoria "

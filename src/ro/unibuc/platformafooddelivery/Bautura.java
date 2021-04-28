@@ -4,11 +4,11 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Date;
 
-public class Bauturi {
+public class Bautura {
     @NotNull
     protected String denumireBautura;
 
-    public Bauturi(@NotNull String denumireBautura) {
+    public Bautura(@NotNull String denumireBautura) {
         this.denumireBautura = denumireBautura;
     }
 
