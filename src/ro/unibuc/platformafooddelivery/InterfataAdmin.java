@@ -10,17 +10,22 @@ import java.util.Scanner; //citeste -> vine de la scann
 public interface InterfataAdmin {
 
     Utilizator getUtilizatorById(int id);
+
     Comanda getComandaById(int id);
+
     Restaurant getRestaurantById(int id);
 
     ArrayList<Comanda> comenzi = new ArrayList<>();
     ArrayList<Restaurant> restaurante = new ArrayList<>();
-    ArrayList<Utilizator> utilizator = new ArrayList<>();
+    ArrayList<Utilizator> utilizatori = new ArrayList<>();
     ArrayList<Sofer> sofer = new ArrayList<>();
 
     void adaugaComanda(Scanner in);
+
     void adaugaRestaurant(Scanner in);
+
     void adaugaUtilizator(Scanner in);
+
     void adaugaSofer(Scanner in);
 
 
@@ -33,4 +38,6 @@ public interface InterfataAdmin {
             return null;
         }
     }
+
 }
+

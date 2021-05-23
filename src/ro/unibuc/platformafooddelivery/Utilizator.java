@@ -2,6 +2,7 @@ package ro.unibuc.platformafooddelivery;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
@@ -12,6 +13,10 @@ public class Utilizator {
     protected Date dataNasterii; //(yyyy-mm-zz)
     protected String adresa;
     private static int contor = 0;
+
+    public Utilizator(int id) {
+        this.id = id;
+    }
 
     public Utilizator(@NotNull String userName, Date dataNasterii, String adresa) {
         this.userName = userName;
@@ -54,11 +59,16 @@ public class Utilizator {
         return "Utilizator{" +
                 "userName='" + userName + '\'' +
                 ", id=" + id +
-                ", dataNasterii=" + dataNasterii +
+                ", dataNasterii=" + new SimpleDateFormat("yyyy-MM-dd").format(dataNasterii) +
                 ", adresa='" + adresa + '\'' +
                 '}';
     }
 
-    public void add(Utilizator utilizator) {
+
+    //metoda toCsv pentru a concatena campurile, imi creeaza o linia din csv
+    public String toCsv()
+    {
+        return userName + "," + new SimpleDateFormat("yyyy-MM-dd").format(dataNasterii) + "," + adresa;
     }
 }
+

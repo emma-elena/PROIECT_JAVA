@@ -7,3 +7,31 @@ S-a adaugat un nou utilizator2021-04-28 at 18:28:30
 S-au vizualizat datele unui utilizator2021-04-28 at 18:28:43
 S-a adaugat o comanda noua2021-04-28 at 18:29:41
 S-au vizualizat toate comenzile2021-04-28 at 18:29:46
+S-au vizualizat utilizatori2021-05-23 at 10:17:20
+S-a adaugate utilizatorul: adi,2021-05-23 at 10:17:51
+S-a adaugate utilizatorul: adrian,2021-05-23 at 10:37:37
+S-a adaugate comanda: Comanda{restaurant='mc', utilizatorul='maria', mancare='mc', bautura='puisor', data=Sun May 23 00:00:00 EEST 2021, id=1},2021-05-23 at 12:21:48
+S-a adaugat o comanda noua2021-05-23 at 12:21:48
+S-a adaugate comanda: Comanda{restaurant='mc', utilizatorul='maria', mancare='mc', bautura='puisor', data=null, id=1},2021-05-23 at 12:24:17
+S-au vizualizat utilizatori2021-05-23 at 14:30:14
+S-au vizualizat utilizatori2021-05-23 at 14:56:20
+S-au vizualizat toate comenzile2021-05-23 at 14:57:51
+S-a adaugate utilizatorul: dan,2021-05-23 at 15:10:38
+S-au vizualizat utilizatori2021-05-23 at 15:11:11
+S-au vizualizat restaurante2021-05-23 at 15:17:47
+S-au vizualizat restaurante2021-05-23 at 15:17:52
+S-au vizualizat toate comenzile2021-05-23 at 15:18:00
+S-a adaugate comanda: Comanda{restaurant='kfc', utilizatorul='dan', mancare='aripioare', bautura='sprite', data=Sun May 23 00:00:00 EEST 2021, id=1},2021-05-23 at 16:09:52
+S-a adaugat o comanda noua2021-05-23 at 16:09:52
+S-a adaugate utilizatorul: marian,2021-05-23 at 19:41:53
+S-a adaugate comanda: Comanda{restaurant='scoica', utilizatorul='marian', mancare='sushi', bautura='fanta', data=Fri Nov 20 00:00:00 EET 2020, id=1},2021-05-23 at 19:44:06
+S-a adaugat o comanda noua2021-05-23 at 19:44:06
+S-a adaugat un nou sofer2021-05-23 at 19:55:59
+S-a adaugat un nou restaurant2021-05-23 at 19:57:27
+S-a adaugat un nou restaurant2021-05-23 at 19:58:09
+S-au vizualizat toate comenzile2021-05-23 at 20:02:17
+S-au vizualizat restaurante2021-05-23 at 20:02:28
+S-au vizualizat utilizatori2021-05-23 at 20:02:33
+S-au vizualizat toate comenzile2021-05-23 at 20:08:26
+S-au vizualizat restaurante2021-05-23 at 20:08:32
+S-au vizualizat utilizatori2021-05-23 at 20:08:33

@@ -6,8 +6,9 @@ import java.util.Date;
 
 public class Mancare {
     @NotNull
-    protected String denumireMancare;
-    protected int numarCalorii;
+    private String denumireMancare;
+    private int numarCalorii;
+    private String reteta;
 
     public Mancare(@NotNull String denumireMancare, int numarCalorii) {
         this.denumireMancare = denumireMancare;

@@ -2,6 +2,8 @@ package ro.unibuc.platformafooddelivery;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.text.SimpleDateFormat;
+
 public class Restaurant {
 
     @NotNull
@@ -32,4 +34,5 @@ public class Restaurant {
                 ", id=" + id +
                 '}';
     }
+
 }

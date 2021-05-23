@@ -6,13 +6,18 @@ import java.util.Date;
 
 public class Comanda {
     @NotNull
-    protected final String restaurant;
-    protected final String utilizatorul;
-    protected final String mancarea;
-    protected final String bautura;
-    protected final Date data;
-    protected final int id;
+    private String restaurant;
+    private String utilizatorul;
+    private int idUtilizator;
+    private String mancarea;
+    private String bautura;
+    private Date data;
+    private final int id;
     private static int contor = 0;
+
+    public Comanda(int id) {
+        this.id = id;
+    }
 
     public Comanda(@NotNull String restaurant, String utilizatorul,String mancarea,String bautura, Date data){
         this.restaurant = restaurant;
@@ -44,6 +49,33 @@ public class Comanda {
         return id;
     }
 
+    public void setRestaurant(String restaurant) {
+        this.restaurant = restaurant;
+    }
+
+    public void setUtilizatorul(String utilizatorul) {
+        this.utilizatorul = utilizatorul;
+    }
+
+    public void setMancarea(String mancarea) {
+        this.mancarea = mancarea;
+    }
+
+    public void setBautura(String bautura) {
+        this.bautura = bautura;
+    }
+
+    public void setData(Date data) {
+        this.data = data;
+    }
+
+    public int getIdUtilizator() {
+        return idUtilizator;
+    }
+
+    public void setIdUtilizator(int idUtilizator) {
+        this.idUtilizator = idUtilizator;
+    }
 
     @Override
     public String toString() {
@@ -57,4 +89,5 @@ public class Comanda {
                 '}';
     }
 }
+
 
