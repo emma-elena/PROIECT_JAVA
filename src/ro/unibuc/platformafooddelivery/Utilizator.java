@@ -65,7 +65,7 @@ public class Utilizator {
     }
 
 
-    //metoda toCsv pentru a concatena campurile, imi creeaza o linia din csv
+    //metoda toCsv pentru a concatena campurile, imi creeaza o linia din cod
     public String toCsv()
     {
         return userName + "," + new SimpleDateFormat("yyyy-MM-dd").format(dataNasterii) + "," + adresa;

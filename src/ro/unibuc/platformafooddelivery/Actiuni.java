@@ -31,11 +31,9 @@ public class Actiuni  implements InterfataAdmin{
 
     @Override
     public Utilizator getUtilizatorById(int id){
-        for(Utilizator utilizatorul: utilizatori){
-            if(utilizatorul.getId() == id)
-                return utilizatorul;
-        }
-        return null;
+        Utilizator utilizatorul;
+        utilizatorul = daoUtilizator.getUtilizatorDupaID(id);
+        return utilizatorul;
     }
 
     @Override
@@ -274,9 +272,8 @@ public class Actiuni  implements InterfataAdmin{
     }
 
     public void afiseazaUtilizatori() {
-        serviciuFisierUtilizator.citesteOrdonatDupaData().forEach(utilizator -> System.out.println(utilizator.toString()));
+        serviciuFisierUtilizator.citesteOrdonatDupaData().forEach(utilizatori -> System.out.println(utilizatori.toString()));
     }
-
     public void stergeUtilizator(String nume) {
         daoUtilizator.deleteUtilizator(nume);
     }
@@ -297,6 +294,13 @@ public class Actiuni  implements InterfataAdmin{
         }
 
     }
+
+    public void incarcaComenzi(String _idComanda)
+    {
+        Comanda comenzi = daoComenzi.getComenzi(_idComanda);
+        System.out.println(comenzi.toString());
+    }
+
 
     //cu Map
     public void afiseazaUtilizatoriDb() {

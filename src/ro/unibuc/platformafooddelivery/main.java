@@ -1,9 +1,11 @@
 package ro.unibuc.platformafooddelivery;
-
+import ro.unibuc.platformafooddelivery.services.DaoComenzi;
 import java.util.Scanner;
 
 public class main {
+
     public static void main(String[] args) {
+
         Scanner in = new Scanner(System.in);
 
         Actiuni actiuni = new Actiuni();
@@ -14,7 +16,7 @@ public class main {
         System.out.println("Pentru a adauga o comanda apasati 3");
         System.out.println("Pentru a adauga un restaurant apasati 4");
         System.out.println("Pentru a vedea o comanda apasati 5");
-        System.out.println("Pentru a vedea datele unui utilizatori apasati 6");
+        System.out.println("Pentru a vedea datele unui utilizator apasati 6");
         System.out.println("Pentru a vedea care sunt toate comenzile apasati 7");
         System.out.println("Pentru a vedea care sunt toate restaurantele apasati 8");
         System.out.println("Pentru a vedea toti utilizatorii apasati 9");
@@ -42,8 +44,8 @@ public class main {
                     actiuni.adaugaRestaurant(in);
                     actiuni.alegere4();
                 } else if (alegere == 5) {
-                    System.out.println("Introduceti ID-ul comenzii pentru care doriti sa vedeti detalii");
-                    System.out.println(actiuni.getComandaById(in.nextInt()).toString());
+                    System.out.println("Introduceti ID-ul comenzii pentru care doriti detalii");
+                    actiuni.incarcaComenzi(in.next());
                     actiuni.alegere5();
                 } else if (alegere == 6) {
                     System.out.println("Introduceti ID-ul utilizatorului pentru care doriti detalii");
@@ -92,10 +94,3 @@ public class main {
         }
     }
 }
-
-
-
-
-
-
-

@@ -16,6 +16,7 @@ public interface InterfataAdmin {
     Restaurant getRestaurantById(int id);
 
     ArrayList<Comanda> comenzi = new ArrayList<>();
+
     ArrayList<Restaurant> restaurante = new ArrayList<>();
     ArrayList<Utilizator> utilizatori = new ArrayList<>();
     ArrayList<Sofer> sofer = new ArrayList<>();

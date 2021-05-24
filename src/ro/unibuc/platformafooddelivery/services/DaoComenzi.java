@@ -50,6 +50,27 @@ public class DaoComenzi {
         return comanda;
     }
 
+    public Comanda getComenzi(String idComanda) {
+        Comanda comanda = null;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT ID, RESTAURANT, MANCARE, BAUTURA, DATA FROM COMENZI WHERE ID = ?");
+            preparedStatement.setString(1, idComanda);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                comanda = new Comanda(resultSet.getInt(1));
+                comanda.setRestaurant(resultSet.getString(2));
+                comanda.setMancarea(resultSet.getString(3));
+                comanda.setBautura(resultSet.getString(4));
+                comanda.setData(resultSet.getDate(5));
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return comanda;
+    }
+
+
     public void insert(Comanda comanda) {
 
         try {
@@ -63,6 +84,5 @@ public class DaoComenzi {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 }

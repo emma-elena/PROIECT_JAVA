@@ -14,7 +14,6 @@ public class Comanda {
     private Date data;
     private final int id;
     private static int contor = 0;
-
     public Comanda(int id) {
         this.id = id;
     }

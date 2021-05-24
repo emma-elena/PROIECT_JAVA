@@ -74,6 +74,27 @@ public class DaoUtilizator {
         return utilizator;   //imi returneaza un utilizator care se duce in Actiuni pentru a il afisa
     }
 
+    public Utilizator getUtilizatorDupaID(int id) {
+        Utilizator utilizator = null;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT ID, NUME, DATA_NASTERII, ADRESA FROM UTILIZATOR WHERE ID = ?");
+            preparedStatement.setInt(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery(); //executeQuery ca sa fac select si imi reurneaza un ResultSet
+            //ResultSet contine mai multe randuri din DB
+            while (resultSet.next())   //cu next se duce pe primul rand din baza mea de date
+            {
+                //in primul rand iau campurile corespondente campurilor de pe utilizatorul meu ca sa imi creez unul
+                utilizator = new Utilizator(resultSet.getInt(1));  //primeste id-ul utilizatorului, 1 este numarul coloanei (ordinea din SELECT)
+                utilizator.setUserName(resultSet.getString(2));
+                utilizator.setDataNasterii(resultSet.getDate(3));
+                utilizator.setAdress(resultSet.getString(4));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return utilizator;   //imi returneaza un utilizator care se duce in Actiuni pentru a il afisa
+    }
+
     public void deleteUtilizator(String nume) {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM UTILIZATOR WHERE NUME = ?");
