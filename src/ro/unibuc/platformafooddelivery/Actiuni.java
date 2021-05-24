@@ -81,7 +81,7 @@ public class Actiuni  implements InterfataAdmin{
         System.out.println("Introduceti numele bauturii");
         String bautura = in.next();
 
-        System.out.println("Introduceti data sub forma aaaa-ll-zz");
+        System.out.println("Introduceti data sub forma aaaa/ll/zz");
         Date data = parseDate(in);
 
         //aici o sa creezi noua comanda care o sa aiba particularitatile introduse mai sus

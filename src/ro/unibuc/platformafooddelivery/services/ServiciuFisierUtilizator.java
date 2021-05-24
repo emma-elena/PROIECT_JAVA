@@ -38,12 +38,13 @@ public class ServiciuFisierUtilizator {
 
     public List<Utilizator> citesteOrdonatDupaData() {
         List<Utilizator> utilizatori = new ArrayList<>();
-        List<String> continutCsv = serviciuCitire.citesteContinutFisier(new File(file));
+        List<String> continutCsv = serviciuCitire.citesteContinutFisier(new File(file));  //adauga continutul intr-o lista de utilizatori
         for (String linieCsv : continutCsv) {
             Utilizator obiectUtilizator;
             obiectUtilizator = transformaCsv(linieCsv);
             utilizatori.add(obiectUtilizator);
         }
+        //apeleaza sort, comparatorul ii zice metodei sort sa compare utilizatorii folosind data nasterii, sortare lista de obiecte
         utilizatori.sort(Comparator.comparing(utilizator -> utilizator.getDataNasterii()));
         return utilizatori;
     }

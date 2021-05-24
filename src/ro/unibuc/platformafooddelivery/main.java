@@ -1,5 +1,4 @@
 package ro.unibuc.platformafooddelivery;
-import ro.unibuc.platformafooddelivery.services.DaoComenzi;
 import java.util.Scanner;
 
 public class main {
@@ -83,7 +82,6 @@ public class main {
                     String nume = in.next();
                     actiuni.selecteazaComandaUtilizator(nume);
                 }else if (alegere == 16) {
-
                     System.out.println("Afiseaza utilizatori:");
                     actiuni.afiseazaUtilizatoriDb();
                 }

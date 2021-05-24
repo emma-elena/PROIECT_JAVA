@@ -34,7 +34,7 @@ public interface InterfataAdmin {
         try {
             String date = in.next();
             //parsarea datei
-            return new SimpleDateFormat("yyyy-MM-dd").parse(date);
+            return new SimpleDateFormat("yyyy/MM/dd").parse(date);
         } catch (ParseException e) {
             return null;
         }
